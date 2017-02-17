@@ -1,0 +1,16 @@
+body {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.navbar-default {
+    background-color: cornflowerblue;
+}
+
+.navbar .navbar-brand {
+    color: white;
+}
+
+.navbar .navbar-text {
+    color: white;
+}
