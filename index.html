@@ -5,11 +5,13 @@
     <title>My Resume</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="myScript.js"> </script>
     <link href="style.css" rel="stylesheet"/>
 </head>
 <body>
 <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container-fluid">
+    <div class="container">
         <div class="navbar-text pull-right">
             <a>
                 <span class="glyphicon glyphicon-download"></span></a>
@@ -32,14 +34,14 @@
         </div>
     </div>
 </nav>
-<div class="container-fluid" id="home">
+<div class="container" id="home">
 <div class="row">
     <div class="col-sm-9 col-md-9 col-lg-9 col-xs-9">
         <div class="jumbotron">
             <h1>I am Partha Sarathi Jena</h1>
             <div class="page-header">
                 <h1>I am a
-                    <small>Android developer,Web developer</small>
+                    <small id="roles">Android developer,Web developer</small>
                 </h1>
             </div>
         </div>
@@ -50,8 +52,8 @@
 </div>
 </div>
 
-
-    <div class="panel panel-primary" id="education">
+<div class="container">
+    <div class="panel panel-default" id="education">
         <div class="panel-heading" >EDUCATION</div>
         <div class="panel-body" >
             <ul>
@@ -69,38 +71,65 @@
             </ul>
         </div>
     </div>
-    <div class="panel panel-primary" id="skills">
+</div>
+
+<div id="skills1" class="skills">
+    <div class="container">
+        <h3 class="title">Skills</h3>
+        <div class="skills-info">
+            <div class="col-md-6 bar-grids">
+                <h6>JAVA <span> 80% </span></h6>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped active" style="width: 80%">
+                    </div>
+                </div>
+                <h6>PYTHON <span> 70% </span></h6>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped active" style="width: 70%">
+                    </div>
+                </div>
+                <h6>WEB DEVELOPMENT<span>90% </span></h6>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped active" style="width: 90%">
+                    </div>
+                </div>
+                <h6>SQL<span> 75% </span></h6>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped active" style="width: 75%">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 bar-grids">
+                <h6>TESTING <span> 85% </span></h6>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped active" style="width: 85%">
+                    </div>
+                </div>
+                <h6>PERFORMANCE TESTNG<span> 95% </span></h6>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped active" style="width: 95%">
+                    </div>
+                </div>
+                <h6>DATA <span>80% </span></h6>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped active" style="width: 80%">
+                    </div>
+                </div>
+                <h6>MACHINE LEARNING<span> 60% </span></h6>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped active" style="width: 60%">
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="panel panel-default" id="skills">
         <div class="panel-heading">TECHNICAL KNOWLEDGE</div>
         <div class="panel-body">
-
-            <div class="progress">
-                <a>JAVA</a>
-                <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar"
-                     style="width: 40%">
-                    <span class="sr-only">40% Complete (success)</span>
-                </div>
-            </div>
-            <div class="progress">
-                <a>PYTHON</a>
-                <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar"
-                     style="width: 20%">
-                    <span class="sr-only">20% Complete</span>
-                </div>
-            </div>
-            <div class="progress">
-                <a>ANDROID DEVELOPMENT</a>
-                <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar"
-                     style="width: 60%">
-                    <span class="sr-only">60% Complete (warning)</span>
-                </div>
-            </div>
-            <div class="progress">
-                <a>WEB DEVELOPMENT</a>
-                <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar"
-                     style="width: 80%">
-                    <span class="sr-only">80% Complete (danger)</span>
-                </div>
-            </div>
             <ul>
                 <li>Programming Languages: Java, Python 2, SQL, Racket, JavaScript</li>
                 <li>Tools: Python IDLE, Eclipse, Android Studio, HP Quality Centre, Load runner, New Relic, GitHub</li>
@@ -110,74 +139,92 @@
             </ul>
         </div>
     </div>
-    <div class="panel panel-primary" id="work">
-        <div class="panel-heading">WORK EXPERIENCE</div>
-        <div class="panel-body">
-            <ul>
-                <li>
-                    <b>Tata Consultancy Services, Mumbai, India Mar 2015 – June 2016</b>
-                    <b>Performance Engineer</b>
-                    <ul>
-                        <li>
-                            Designed and developed automated performance test scripts and scenarios using HP Loadrunner
-                            that tested the performance of the website under the maximum load of 300 users.
-                        </li>
-                        <li>
-                            Analyzed and monitored performance of websites and infrastructure using HP Loadrunner and
-                            New
-                            Relic tools.
-                        </li>
-                        <li>
-                            Reported performance defects using HP ALM/Quality Centre.
-                        </li>
-                        <li>
-                            Developed macro scripts in Visual Basic that automated the manual performance report
-                            generating process and reduced the manual report generation effort by 90 percent.
-                        </li>
-                    </ul>
-                </li>
-                <li>
+</div>
+
+<div id="work" class="work">
+    <div class="container">
+        <h3 class="title">Work Experience</h3>
+        <div class="work-info">
+            <div class="col-md-6 work-left">
+                <h4>2015 - 2016 </h4>
+            </div>
+            <div class="col-md-6 work-right">
+                <h5><span class="glyphicon glyphicon-briefcase"> </span> TATA CONSULTANCY SERVICES</h5>
+                <p> <b>Performance Engineer Mar 2015 – June 2016</b>
+                <ul>
+                    <li>
+                        Designed and developed automated performance test scripts and scenarios using HP Loadrunner
+                        that tested the performance of the website under the maximum load of 300 users.
+                    </li>
+                    <li>
+                        Analyzed and monitored performance of websites and infrastructure using HP Loadrunner and
+                        New
+                        Relic tools.
+                    </li>
+                    <li>
+                        Reported performance defects using HP ALM/Quality Centre.
+                    </li>
+                    <li>
+                        Developed macro scripts in Visual Basic that automated the manual performance report
+                        generating process and reduced the manual report generation effort by 90 percent.
+                    </li>
+                </ul> </p>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+        <div class="work-info">
+            <div class="col-md-6 work-right work-right2">
+                <h4>2012 - 2015 </h4>
+            </div>
+            <div class="col-md-6 work-left work-left2">
+                <h5> TATA CONSULTANCY SERVICES <span class="glyphicon glyphicon-briefcase"> </span></h5>
+                <p>
                     <b>Quality Assurance Engineer June 2012 – Feb 2015</b>
-                    <ul>
-                        <li>
-                            Enhanced the automated test regression library using HP propriety languages for functional
-                            testing of HP Tandem Server Kernel that reduced manual testing effort by 70 percent.
-                        </li>
-                        <li>
-                            Performed functional testing on applications built on Tandem servers and automated using HP
-                            propriety languages such as TAL and TACL.
-                        </li>
-                    </ul>
-                </li>
-            </ul>
+                <ul>
+                    <li>
+                        Enhanced the automated test regression library using HP propriety languages for functional
+                        testing of HP Tandem Server Kernel that reduced manual testing effort by 70 percent.
+                    </li>
+                    <li>
+                        Performed functional testing on applications built on Tandem servers and automated using HP
+                        propriety languages such as TAL and TACL.
+                    </li>
+                </ul>
+            </p>
+            </div>
+            <div class="clearfix"> </div>
         </div>
     </div>
+</div>
 
+<div class="container">
     <div class="row">
         <div class="col-sm-6 col-md-4">
             <div class="thumbnail">
-                <img src="..." alt="...">
+                <img src="https://i.ytimg.com/vi/48fKIXlxaXk/maxresdefault.jpg" alt="...">
                 <div class="caption">
-                    <h3>Thumbnail label</h3>
-                    <p>...</p>
-                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default"
-                                                                                       role="button">Button</a></p>
+                    <h3>Popular Movies App</h3>
+                    <p>Built an app to help users discover popular and highly rated movies on the web.
+                        This app utilizes core Android user interface components and fetches movie information using themoviedb.org web API.</p>
+                    <p><a href="https://github.com/parthasj90/PopularMoviesApp" class="btn btn-default" role="button">GITHUB</a></p>
                 </div>
             </div>
         </div>
         <div class="col-sm-6 col-md-4">
             <div class="thumbnail">
-                <img src="..." alt="...">
+                <img src="http://sawadacoffee.com/wp-content/uploads/11DEC2015008.jpg" alt="...">
                 <div class="caption">
-                    <h3>Thumbnail label</h3>
-                    <p>...</p>
-                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default"
-                                                                                       role="button">Button</a></p>
+                    <h3>Coffee Ordering App</h3>
+                    <p>A simple android application which allows the user to order coffee by generating an order summary and sending it via email</p>
+                    <p> <a href="https://github.com/parthasj90/CoffeeOrderApp" class="btn btn-default" role="button">GITHUB</a></p>
                 </div>
             </div>
         </div>
     </div>
-    <div class="panel panel-primary">
+</div>
+
+<div class="container">
+    <div class="panel panel-default">
         <div class="panel-heading">ACADEMIC PROJECTS</div>
         <div class="panel-body">
             <ul>
@@ -246,8 +293,11 @@
             </ul>
         </div>
     </div>
+</div>
+
+
     <nav class="navbar navbar-default navbar-fixed-bottom ">
-        <div class="container-fluid">
+        <div class="container">
             <div class="navbar-text pull-right" >
                 <a href="https://github.com/parthasj90/" target="_blank">
                     <span class="fa fa-github-square" ></span></a>
